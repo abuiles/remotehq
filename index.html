@@ -7,104 +7,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      p {
+        margin-top: 0;
+      }
+
+      body {
+        font-size: 16px;
+      }
+    </style>
+    <script>
+      window.Companies = [
+        {
+          logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/872561-07c7e4fd6118125b4f5e3b0144e92abe-medium_jpg.jpg?buster=1509584398',
+          name: 'ReturnBase',
+          headline: 'Returnbase builds and manages B2B marketplaces for excess inventory and customer returns (YC W17)',
+          description: `Returnbase is a software powered logistics startup with a revolutionary approach to managing the billions of dollars worth of excess inventory and customers returns retailers deal with every year. Our platform makes retail, one of the largest industries in the world, more efficient by solving one of its largest pain points.
+
+        We are backed by some of the best investors in Silicon Valley, including Y Combinator, Initialized Capital, VTF Capital, Soma Capital, and more.`,
+          jobs: [
+            {
+              title: "Senior Rails developer",
+              byline: "Full Time · Remote OK · San Francisco · Software Engineer",
+              salaryRange: ["90K", "100K"],
+              equityRange: ["2%", "0.2%"]
+            },
+            {
+              title: "Senior JS developer",
+              byline: "Full Time · Remote OK · San Francisco · Software Engineer",
+              salaryRange: ["90K", "100K"],
+              equityRange: ["2%", "0.2%"]
+            }
+          ]
+        }
+      ]
+    </script>
   </head>
-  <body class="">
-    <article class="mw7 pa2 center bg-lightest-blue dark-gray">
-      <div class="flex">
-        <img class="br-100 h3 w3 dib" src="https://d1qb2nb5cznatu.cloudfront.net/startups/i/872561-07c7e4fd6118125b4f5e3b0144e92abe-medium_jpg.jpg?buster=1509584398">
-        <h1 class="ml3 lh-title">
-          ReturnBase
-        </h1>
+  <body class="bg-near-white avenir lh-copy">
+    <header class="sans-serif">
+      <div class="cover bg-left bg-center-l">
+        <div class="bg-black-80">
+          <nav class="dt w-100 mw8 center">
+            <div class="dtc w2 v-mid">
+              <a href="/" class="dib w2 h2 pa1 ba b--white-90 grow-large border-box">
+                <svg class="link white-90 hover-white" data-icon="skull" viewBox="0 0 32 32" style="fill:currentcolor"><title>skull icon</title><path d="M16 0 C6 0 2 4 2 14 L2 22 L6 24 L6 30 L26 30 L26 24 L30 22 L30 14 C30 4 26 0 16 0 M9 12 A4.5 4.5 0 0 1 9 21 A4.5 4.5 0 0 1 9 12 M23 12 A4.5 4.5 0 0 1 23 21 A4.5 4.5 0 0 1 23 12"></path></svg>
+              </a>
+            </div>
+            <div class="dtc v-mid tr pa3">
+              <a class="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >How it Works</a>
+              <a class="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >Pricing</a>
+              <a class="f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3" href="/" >About</a>
+              <a class="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a>
+            </div>
+          </nav>
+        </div>
       </div>
-      <h2 class="fw2 lh-copy">
-        Returnbase builds and manages B2B marketplaces for excess inventory and customer returns (YC W17)
-      </h2>
-      <p class="">
-        Returnbase is a software powered logistics startup with a revolutionary approach to managing the billions of dollars worth of excess inventory and customers returns retailers deal with every year. Our platform makes retail, one of the largest industries in the world, more efficient by solving one of its largest pain points.
+    </header>
 
-        We are backed by some of the best investors in Silicon Valley, including Y Combinator, Initialized Capital, VTF Capital, Soma Capital, and more.
-      </p>
-      <div>
-        <article class="ba b--black-10 br2 bg-white pa4 mw6 center">
-          <div>
-            <h4 class="f5 fw4 black-60 dib v-mid mv0 mr3">Jobs</h4>
+    <div id="app">
+      <article v-for="company in companies" class="company mw7 mt4 pa2 center">
+        <div class="flex items-center">
+          <div class="w4 pr3">
+            <img class="br-100 db" :src="company.logoUrl">
           </div>
-          <ul class="list f6 pl0 mt3 mb0">
-            <li class="pv2">
-              <a href="#" class="link blue lh-title">
-                <span class="fw7 underline-hover">Senior Rails Engineer</span>
-                <span class="db black-60">20 applicants</span>
-              </a>
-            </li>
-            <li class="pv2">
-              <a href="#" class="link blue lh-title">
-                <span class="fw7 underline-hover">Senior Product Engineer</span>
-                <span class="db black-60">10 applicants</span>
-              </a>
-            </li>
-          </ul>
-        </article>
-      </div>
-      <div class="mt3">
-        <a class="f6 br-pill no-underline ba grow pv2 ph3 dib mr3"
-           href="#">
-          Apply
-        </a>
-        <a class="f6 br-pill no-underline ba grow pv2 ph3 dib"
-           href="#">
-          Learn More
-        </a>
-      </div>
-    </article>
-
-
-    <article class="mt4 mw7 pa2 center bg-lightest-blue dark-gray">
-      <div class="flex">
-        <img class="br-100 h3 w3 dib" src="https://d1qb2nb5cznatu.cloudfront.net/startups/i/872561-07c7e4fd6118125b4f5e3b0144e92abe-medium_jpg.jpg?buster=1509584398">
-        <h1 class="ml3 lh-title">
-          AAsdfasdf ADSFASDF
-        </h1>
-      </div>
-      <h2 class="fw2 lh-copy">
-        Returnbase builds and manages B2B marketplaces for excess inventory and customer returns (YC W17)
-      </h2>
-      <p class="">
-        Returnbase is a software powered logistics startup with a revolutionary approach to managing the billions of dollars worth of excess inventory and customers returns retailers deal with every year. Our platform makes retail, one of the largest industries in the world, more efficient by solving one of its largest pain points.
-
-        We are backed by some of the best investors in Silicon Valley, including Y Combinator, Initialized Capital, VTF Capital, Soma Capital, and more.
-      </p>
-      <div>
-        <article class="ba b--black-10 br2 bg-white pa4 mw6 center">
-          <div>
-            <h4 class="f5 fw4 black-60 dib v-mid mv0 mr3">Jobs</h4>
+          <div class="">
+            <h1 class="f3 mt0 mb1 pb0 lh-title">
+              {{company.name}}
+            </h1>
+            <h2 class="mv0 fw4 black-60 f5">
+              {{company.headline}}
+            </h2>
           </div>
-          <ul class="list f6 pl0 mt3 mb0">
-            <li class="pv2">
-              <a href="#" class="link blue lh-title">
-                <span class="fw7 underline-hover">Senior Rails Engineer</span>
-                <span class="db black-60">20 applicants</span>
-              </a>
-            </li>
-            <li class="pv2">
-              <a href="#" class="link blue lh-title">
-                <span class="fw7 underline-hover">Senior Product Engineer</span>
-                <span class="db black-60">10 applicants</span>
-              </a>
-            </li>
-          </ul>
-        </article>
-      </div>
-      <div class="mt3">
-        <a class="f6 br-pill no-underline ba grow pv2 ph3 dib mr3"
-           href="#">
-          Apply
-        </a>
-        <a class="f6 br-pill no-underline ba grow pv2 ph3 dib"
-           href="#">
-          Learn More
-        </a>
-      </div>
-    </article>
+        </div>
+        <p class="mt2">
+          {{company.description}}
+        </p>
+        <div>
+          <div>
+            <h4 class="ph4 fw4 black-60 mb2">Jobs</h4>
+          </div>
+          <article class="ba b--black-10 br2 pa4 center">
+            <ul class="list pl0 mv0">
+              <li v-for="job in company.jobs" class="pv2 flex justify-between items-center">
+                <div>
+                  <a href="#" class="f4 mb1 db link blue lh-title">
+                    <span class="fw7 underline-hover">{{job.title}}</span>
+                  </a>
+                  <p class="f6">{{job.byline}}</p>
+                </div>
 
+                <div class="tc">
+                  <p class="mb0">${{job.salaryRange[0]}} - ${{job.salaryRange[1]}}</p>
+                  <p class="mb0">{{job.equityRange[0]}} - {{job.equityRange[1]}}</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </article>
+    </div>
   </body>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        companies: window.Companies
+      }
+    })
+  </script>
 </html>
