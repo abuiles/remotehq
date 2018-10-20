@@ -36,6 +36,26 @@
           ]
         },
         {
+          logoUrl: 'https://d2crhp0mf8xrz.cloudfront.net/assets/Komet.png',
+          name: 'Kometsales',
+          headline: 'Floral Platform for Importers, Wholesalers & Growers',
+          description: `Komet is a web-based solution designed for the floral industry that gives you the necessary tools to automate procurement, sales, and logistic processes while connecting with your key business partners.`,
+          jobs: [
+            {
+              title: "CTO",
+              byline: "Full Time · Remote OK · Medellin · Software Engineer",
+              salaryRange: [],
+              equityRange: []
+            },
+            {
+              title: "Senior Java developer",
+              byline: "Full Time · Remote OK · Medellin · Software Engineer",
+              salaryRange: [],
+              equityRange: []
+            }
+          ]
+        },
+        {
           logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/305102-d66d2bdcead2e14438eccda18f5bc03a-medium_jpg.jpg?buster=1466123758',
           name: 'Envoy',
           headline: 'Challenging the status quo of workplace technology.',
@@ -152,8 +172,8 @@ Now, we’re looking around the office—past the lobby, to the mailroom, meetin
                 </div>
 
                 <div class="tc">
-                  <p class="mb0">${{job.salaryRange[0]}} - ${{job.salaryRange[1]}}</p>
-                  <p class="mb0">{{job.equityRange[0]}} - {{job.equityRange[1]}}</p>
+                  <p v-if="job.salaryRange.length > 0" class="mb0">${{job.salaryRange[0]}} - ${{job.salaryRange[1]}}</p>
+                  <p v-if="job.equityRange.length > 0" class="mb0">{{job.equityRange[0]}} - {{job.equityRange[1]}}</p>
                 </div>
               </li>
             </ul>
