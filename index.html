@@ -20,42 +20,7 @@
     <script>
       window.Companies = [
         {
-          logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/872561-07c7e4fd6118125b4f5e3b0144e92abe-medium_jpg.jpg?buster=1509584398',
-          name: 'Returnbase',
-          headline: 'Returnbase builds and manages B2B marketplaces for excess inventory and customer returns (YC W17)',
-          description: `Returnbase is a software powered logistics startup with a revolutionary approach to managing the billions of dollars worth of excess inventory and customers returns retailers deal with every year. Our platform makes retail, one of the largest industries in the world, more efficient by solving one of its largest pain points.
-
-        We are backed by some of the best investors in Silicon Valley, including Y Combinator, Initialized Capital, VTF Capital, Soma Capital, and more.`,
-          jobs: [
-            {
-              title: "Senior Rails developer",
-              byline: "Full Time · Remote OK · San Francisco · Software Engineer",
-              salaryRange: ["90K", "100K"],
-              equityRange: ["2%", "0.2%"]
-            }
-          ]
-        },
-        {
-          logoUrl: 'https://d2crhp0mf8xrz.cloudfront.net/assets/Komet.png',
-          name: 'Kometsales',
-          headline: 'Floral Platform for Importers, Wholesalers & Growers',
-          description: `Komet is a web-based solution designed for the floral industry that gives you the necessary tools to automate procurement, sales, and logistic processes while connecting with your key business partners.`,
-          jobs: [
-            {
-              title: "CTO",
-              byline: "Full Time · Remote OK · Medellin · Software Engineer",
-              salaryRange: [],
-              equityRange: []
-            },
-            {
-              title: "Senior Java developer",
-              byline: "Full Time · Remote OK · Medellin · Software Engineer",
-              salaryRange: [],
-              equityRange: []
-            }
-          ]
-        },
-        {
+          hq: 'San Francisco',
           logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/305102-d66d2bdcead2e14438eccda18f5bc03a-medium_jpg.jpg?buster=1466123758',
           name: 'Envoy',
           headline: 'Challenging the status quo of workplace technology.',
@@ -69,15 +34,68 @@ Now, we’re looking around the office—past the lobby, to the mailroom, meetin
           jobs: [
             {
               title: "Engineering",
-              byline: "Full Time · Remote OK · San Francisco · Software Engineer",
+              byline: "Ruby On Rails - Elixir",
               salaryRange: ["110K", "170K"],
               equityRange: ["0.05%", "0.01%"]
             },
             {
               title: "DevOps Systems Engineer",
-              byline: "Full Time · Remote OK · San Francisco · Software Engineer",
+              byline: "",
               salaryRange: ["100K", "175K"],
               equityRange: ["0.04", "0.01%"]
+            }
+          ]
+        },
+        {
+          hq: 'San Francisco',
+          logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/872561-07c7e4fd6118125b4f5e3b0144e92abe-medium_jpg.jpg?buster=1509584398',
+          name: 'Returnbase',
+          headline: 'Returnbase builds and manages B2B marketplaces for excess inventory and customer returns (YC W17)',
+          description: `Returnbase is a software powered logistics startup with a revolutionary approach to managing the billions of dollars worth of excess inventory and customers returns retailers deal with every year. Our platform makes retail, one of the largest industries in the world, more efficient by solving one of its largest pain points.
+
+        We are backed by some of the best investors in Silicon Valley, including Y Combinator, Initialized Capital, VTF Capital, Soma Capital, and more.`,
+          jobs: [
+            {
+              title: "Senior Rails developer",
+              byline: "Ruby On Rails - Elixir",
+              salaryRange: ["90K", "100K"],
+              equityRange: ["2%", "0.2%"]
+            }
+          ]
+        },
+        {
+          hq: 'Los Angeles',
+          logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/168993-1f405fa1debd3f01fedbd044d553fa1f-medium_jpg.jpg?buster=1379686729',
+          name: '7 Cups of Tea',
+          headline: 'Marketplace for Emotional Support (YC S13)',
+          description: `7Cups’ mission is to provide affordable behavioral health support services globally. Since graduating Y-Combinator in 2013, 7Cups’ product has shifted the on-demand mental health economy and has continued to scale into serving people from all walks of life. Over 2 million people from 189 countries (in 140 different languages) use the platform each month and growing.  We are living in a world with an immense love deficit. Many of us are not receiving the love we need to reach our true potential and to truly thrive. We are solving this huge problem and trying to change the stigma around mental health.`,
+          jobs: [
+            {
+              title: "Sr. Software Engineer",
+              byline: "NodeJS",
+              salaryRange: ["100k", "130k"],
+              equityRange: ["0.095%", "0.151%"]
+            },
+          ]
+        },
+        {
+          hq: 'Medellin (Colombia)',
+          logoUrl: 'https://d2crhp0mf8xrz.cloudfront.net/assets/Komet.png',
+          name: 'Kometsales',
+          headline: 'Floral Platform for Importers, Wholesalers & Growers',
+          description: `Komet is a web-based solution designed for the floral industry that gives you the necessary tools to automate procurement, sales, and logistic processes while connecting with your key business partners.`,
+          jobs: [
+            {
+              title: "CTO",
+              byline: "",
+              salaryRange: [],
+              equityRange: []
+            },
+            {
+              title: "Senior Java developer",
+              byline: "",
+              salaryRange: [],
+              equityRange: []
             }
           ]
         }
@@ -107,7 +125,7 @@ Now, we’re looking around the office—past the lobby, to the mailroom, meetin
           </div>
           <div class="">
             <h1 class="f3 mt0 mb1 pb0 lh-title">
-              {{company.name}}
+              {{company.name}} <span class="mv0 fw4 black-60 f5">({{company.hq}})</span>
             </h1>
             <h2 class="mv0 fw4 black-60 f5">
               {{company.headline}}
