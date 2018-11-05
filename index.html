@@ -135,25 +135,25 @@ Now, we’re looking around the office—past the lobby, to the mailroom, meetin
         <p class="mt2">
           {{company.description}}
         </p>
-        <div>
-          <article class="bg-near-white pa4 center">
-            <ul class="list pl0 mv0">
-              <li v-for="job in company.jobs" class="pv2 flex justify-between items-center">
-                <div>
-                  <a href="#" class="f4 mb1 db link blue lh-title">
-                    <span class="fw7 underline-hover">{{job.title}}</span>
-                  </a>
-                  <p class="f6">{{job.byline}}</p>
-                </div>
+        <!-- <div> -->
+        <!--   <article class="bg-near-white pa4 center"> -->
+        <!--     <ul class="list pl0 mv0"> -->
+        <!--       <li v-for="job in company.jobs" class="pv2 flex justify-between items-center"> -->
+        <!--         <div> -->
+        <!--           <a href="#" class="f4 mb1 db link blue lh-title"> -->
+        <!--             <span class="fw7 underline-hover">{{job.title}}</span> -->
+        <!--           </a> -->
+        <!--           <p class="f6">{{job.byline}}</p> -->
+        <!--         </div> -->
 
-                <div class="tc">
-                  <p v-if="job.salaryRange.length > 0" class="mb0">${{job.salaryRange[0]}} - ${{job.salaryRange[1]}}</p>
-                  <p v-if="job.equityRange.length > 0" class="mb0">{{job.equityRange[0]}} - {{job.equityRange[1]}}</p>
-                </div>
-              </li>
-            </ul>
-          </article>
-        </div>
+        <!--         <div class="tc"> -->
+        <!--           <p v-if="job.salaryRange.length > 0" class="mb0">${{job.salaryRange[0]}} - ${{job.salaryRange[1]}}</p> -->
+        <!--           <p v-if="job.equityRange.length > 0" class="mb0">{{job.equityRange[0]}} - {{job.equityRange[1]}}</p> -->
+        <!--         </div> -->
+        <!--       </li> -->
+        <!--     </ul> -->
+        <!--   </article> -->
+        <!-- </div> -->
       </article>
     </div>
   </body>
