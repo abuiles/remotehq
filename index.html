@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
       p {
         margin-top: 0;
@@ -17,162 +16,28 @@
         font-size: 16px;
       }
     </style>
-    <script>
-      window.Companies = [
-        {
-          hq: 'San Francisco',
-          logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/305102-d66d2bdcead2e14438eccda18f5bc03a-medium_jpg.jpg?buster=1466123758',
-          name: 'Envoy',
-          headline: 'Challenging the status quo of workplace technology.',
-          description: `
-You don't need to settle for the way things have always been.
-
-We’re here to do things differently, make your day easier and replace the mundane with moments that delight. This idea started at the front desk, where we replaced outdated log books with iPads and set a new standard for visitor sign-in.
-
-Now, we’re looking around the office—past the lobby, to the mailroom, meeting rooms and beyond—and asking how can we make this better, too? We envision a world where software is seamlessly woven throughout the physical space. And by challenging the status quo of workplace technology, we're working toward this vision every day.
-`,
-          jobs: [
-            {
-              title: "Engineering",
-              byline: "Ruby On Rails - Elixir",
-              salaryRange: ["110K", "170K"],
-              equityRange: ["0.05%", "0.01%"]
-            },
-            {
-              title: "DevOps Systems Engineer",
-              byline: "",
-              salaryRange: ["100K", "175K"],
-              equityRange: ["0.04", "0.01%"]
-            }
-          ]
-        },
-        {
-          hq: 'San Francisco',
-          logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/872561-07c7e4fd6118125b4f5e3b0144e92abe-medium_jpg.jpg?buster=1509584398',
-          name: 'Returnbase',
-          headline: 'Returnbase builds and manages B2B marketplaces for excess inventory and customer returns (YC W17)',
-          description: `Returnbase is a software powered logistics startup with a revolutionary approach to managing the billions of dollars worth of excess inventory and customers returns retailers deal with every year. Our platform makes retail, one of the largest industries in the world, more efficient by solving one of its largest pain points.
-
-        We are backed by some of the best investors in Silicon Valley, including Y Combinator, Initialized Capital, VTF Capital, Soma Capital, and more.`,
-          jobs: [
-            {
-              title: "Senior Rails developer",
-              byline: "Ruby On Rails - Elixir",
-              salaryRange: ["90K", "100K"],
-              equityRange: ["2%", "0.2%"]
-            }
-          ]
-        },
-        {
-          hq: 'Los Angeles',
-          logoUrl: 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/168993-1f405fa1debd3f01fedbd044d553fa1f-medium_jpg.jpg?buster=1379686729',
-          name: '7 Cups of Tea',
-          headline: 'Marketplace for Emotional Support (YC S13)',
-          description: `7Cups’ mission is to provide affordable behavioral health support services globally. Since graduating Y-Combinator in 2013, 7Cups’ product has shifted the on-demand mental health economy and has continued to scale into serving people from all walks of life. Over 2 million people from 189 countries (in 140 different languages) use the platform each month and growing.  We are living in a world with an immense love deficit. Many of us are not receiving the love we need to reach our true potential and to truly thrive. We are solving this huge problem and trying to change the stigma around mental health.`,
-          jobs: [
-            {
-              title: "Sr. Software Engineer",
-              byline: "NodeJS",
-              salaryRange: ["100k", "130k"],
-              equityRange: ["0.095%", "0.151%"]
-            },
-          ]
-        },
-        {
-          hq: 'Medellin (Colombia)',
-          logoUrl: 'https://d2crhp0mf8xrz.cloudfront.net/assets/Komet.png',
-          name: 'Kometsales',
-          headline: 'Floral Platform for Importers, Wholesalers & Growers',
-          description: `Komet is a web-based solution designed for the floral industry that gives you the necessary tools to automate procurement, sales, and logistic processes while connecting with your key business partners.`,
-          jobs: [
-            {
-              title: "CTO",
-              byline: "",
-              salaryRange: [],
-              equityRange: []
-            },
-            {
-              title: "Senior Java developer",
-              byline: "",
-              salaryRange: [],
-              equityRange: []
-            }
-          ]
-        }
-      ]
-    </script>
   </head>
   <body class="avenir lh-copy">
-    <header class="sans-serif bg-blue ph2 pv3">
-      <div class="mw7 center flex items-center justify-between">
-        <a href="/" class="dib w2 grow-large border-box">
-          <img class="db" src="https://png.icons8.com/metro/1600/remote-control.png" />
-        </a>
-        <nav class="dtc v-mid tr">
-          <a class="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="mailto:hi@remotehq.net" >Get in touch!</a>
-          <!-- <a class="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >Pricing</a> -->
-          <!-- <a class="f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3" href="/" >About</a> -->
-          <!-- <a class="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> -->
-        </nav>
+    <section class="flex-ns vh-100 items-center">
+      <div class="mw6 ph5">
+        <img alt="Image from https://undraw.co/" src="./undraw_celebration_0jvk.svg">
       </div>
-    </header>
-
-    <div id="app">
-      <article v-for="company in companies" class="company mw7 mt4 pa2 center">
-        <div class="flex items-center">
-          <div class="w4 pr3">
-            <img class="br-100 db" :src="company.logoUrl">
-          </div>
-          <div class="">
-            <h1 class="f3 mt0 mb1 pb0 lh-title">
-              {{company.name}} <span class="mv0 fw4 black-60 f5">({{company.hq}})</span>
-            </h1>
-            <h2 class="mv0 fw4 black-60 f5">
-              {{company.headline}}
-            </h2>
-          </div>
-        </div>
-        <p class="mt2">
-          {{company.description}}
-        </p>
-        <!-- <div> -->
-        <!--   <article class="bg-near-white pa4 center"> -->
-        <!--     <ul class="list pl0 mv0"> -->
-        <!--       <li v-for="job in company.jobs" class="pv2 flex justify-between items-center"> -->
-        <!--         <div> -->
-        <!--           <a href="#" class="f4 mb1 db link blue lh-title"> -->
-        <!--             <span class="fw7 underline-hover">{{job.title}}</span> -->
-        <!--           </a> -->
-        <!--           <p class="f6">{{job.byline}}</p> -->
-        <!--         </div> -->
-
-        <!--         <div class="tc"> -->
-        <!--           <p v-if="job.salaryRange.length > 0" class="mb0">${{job.salaryRange[0]}} - ${{job.salaryRange[1]}}</p> -->
-        <!--           <p v-if="job.equityRange.length > 0" class="mb0">{{job.equityRange[0]}} - {{job.equityRange[1]}}</p> -->
-        <!--         </div> -->
-        <!--       </li> -->
-        <!--     </ul> -->
-        <!--   </article> -->
-        <!-- </div> -->
-      </article>
-    </div>
+      <div class="tc tl-ns ph3">
+        <h1 class="f3 f1-l fw2 mb3 mt4 mt0-ns">Connect with developers and designer in a whole new way.</h1>
+        <h2 class="f5 f3-l fw1 mb4 mb5-l lh-title">RemoteHQ helps you hire people everywhere.</h2>
+        <a href="mailto:hi@remotehq.net" class="f6 br-pill black no-underline ba grow pv2 ph3 dib" >
+          Learn More
+        </a>
+      </div>
+    </section>
   </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128671319-1"></script>
   <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        companies: window.Companies
-      }
-    })
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128671319-1');
   </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128671319-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-128671319-1');
-</script>
-
 </html>
